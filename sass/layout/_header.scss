@@ -1,0 +1,72 @@
+.header{
+    background-color: $black-color;
+    padding: 38px 0;
+    @include responsive(md){
+        padding: 30px 0;
+    }
+    @include responsive(xs){
+        padding: 25px 0;
+    }
+    .navbar{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__logo{
+            @include responsive(xs){
+                width: 110px;
+            }
+            @include responsive(xxs){
+                width: 90px;
+            }
+        }
+
+        &--open--icon{
+            font-size: 2rem;
+            display: none !important;
+            color: #fff;
+    
+            @include responsive(sm) {
+                display: block !important;
+            }
+    
+            @include responsive(xs) {
+                font-size: 28px;
+            }
+    
+            @include responsive(xxs) {
+                padding: 10px;
+            }
+        }
+        &--close--icon{
+            font-size: 2rem;
+            display: none !important;
+    
+            @include responsive(sm) {
+                display: block !important;
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                font-size: 32px;
+                color: rgb(0, 0, 0);
+                background-color: $color-white;
+                padding: 12px 20px;
+                border-radius: 10px;
+            }
+    
+            @include responsive(xs) {
+                font-size: 24px;
+                top: 45px;
+                left: 45px;
+            }
+    
+            @include responsive(xxs) {
+                font-size: 22px;
+                top: 40px;
+                left: 40px;
+                padding: 10px 18px;
+            } 
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.nav {
+    display: flex;
+    align-items: center;
+
+    &.open {
+        left: 0;
+    }
+
+    @include responsive(sm) {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100vw;
+        height: 100vh;
+        background-color: $black-color;
+        z-index: 999;
+        flex-direction: column;
+        justify-content: center;
+        transition: left .6s ease;
+        justify-content: space-evenly;
+        padding: 15% 0;
+    }
+    @include responsive(ss){
+        padding: 24% 0;
+    }
+
+    &__item {
+        margin-right: 36px;
+
+        @include responsive(md) {
+            margin-right: 20px;
+        }
+
+        @include responsive(sm) {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        color: $color-white;
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: $grey-color-3;
+        @include transition;
+
+        &:hover,
+        &:active {
+            color: $color-white;
+        }
+
+        @include responsive(md) {
+            font-size: 1.1rem;
+        }
+
+        @include responsive(sm) {
+            font-size: 1.8rem;
+            line-height: 1.5;
+        }
+
+        @include responsive(xs) {
+            font-size: 1.8rem;
+        }
+
+        @include responsive(xxs) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &--link--utilization {
+        color: $color-white;
+    }
+}
