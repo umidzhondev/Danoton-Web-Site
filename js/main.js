@@ -31,8 +31,8 @@ var swiper = new Swiper(".hero-swiper", {
   mousewheel: true,
   keyboard: true,
   loop: true,
-  // autoplay: {
-  //   delay: 2000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
 });

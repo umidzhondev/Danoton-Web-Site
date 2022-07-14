@@ -1,25 +1,93 @@
-.button{
+.button {
     border-radius: $border-radius-3;
     padding: 15px 34px;
     color: $color-white;
-    &__hero{
+
+    &__hero {
         @include transition;
-        &:first-child{
+
+        &:first-child {
             background-color: $black-color;
         }
-        &:last-child{
+
+        &:last-child {
             background-color: $red-color;
         }
-        &:hover{
+
+        &:hover {
             background-color: #fff;
             color: $black-color;
         }
-        @include responsive(sm){
+
+        @include responsive(sm) {
             font-size: 20px;
         }
-        @include responsive(xs){
+
+        @include responsive(xs) {
             font-size: 16px;
-            padding: 10px 22px ;
+            padding: 10px 22px;
+        }
+    }
+
+    &__advantages {
+        border: 1px solid $color-white;
+        color: #fff;
+        background-color: transparent;
+        font-size: 24px;
+        @include flex(center, center, row);
+        gap: 12px;
+        @include transition;
+
+        span {
+            font-size: inherit;
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+
+        &:hover,
+        &:active {
+            background-color: $red-color;
+            border-color: $red-color;
+        }
+
+        &.advantages--button--active {
+            background-color: $red-color;
+            border: none;
+        }
+
+        @include responsive(xxl) {
+            font-size: 20px;
+        }
+
+        @include responsive(xxl) {
+            font-size: 18px;
+        }
+
+        @include responsive(md) {
+            padding: 15px 30px;
+        }
+
+        @include responsive(sm) {
+            padding: 14px 20px;
+            font-size: 14px;
+            img{
+                width: 16px;
+                height: 16px;
+            }
+        }
+        @include responsive(xs) {
+            padding: 11px 9px;
+            font-size: 12px;
+            img{
+                display: none;
+            }
+        }
+        @include responsive(xxs) {
+            padding: 7px 7px;
+            font-size: 11px;
         }
     }
 }

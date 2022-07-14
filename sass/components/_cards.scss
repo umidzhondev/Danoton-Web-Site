@@ -24,12 +24,14 @@
         }
 
         @include responsive(xs) {
-            grid-template-columns: repeat(1, 1fr) ;width:350px;
+            grid-template-columns: repeat(1, 1fr);
+            width: 350px;
         }
+
         @include responsive(xxs) {
             width: 100%;
         }
-    
+
     }
 
     &__card {
@@ -38,6 +40,11 @@
         border-radius: $border-radius-1;
         background-color: $second-color;
         border: 1px solid $dark-color-2;
+        @include transition;
+
+        &:hover {
+            border-color: $color-white;
+        }
 
         @include responsive(lg) {
             padding: 20px;
@@ -78,6 +85,7 @@
             @include responsive(xs) {
                 height: 200px;
             }
+
             @include responsive(xxs) {
                 height: 190px;
             }
@@ -100,6 +108,7 @@
             @include responsive(sm) {
                 font-size: 16px;
             }
+
             @include responsive(xxs) {
                 font-size: 14px;
             }
@@ -115,8 +124,9 @@
             color: #A2A2A2;
             margin-bottom: 24px;
             font-size: inherit;
+
             @include responsive(xxs) {
-               margin-bottom: 15px;
+                margin-bottom: 15px;
             }
         }
 
@@ -130,6 +140,103 @@
             &:hover,
             &:active {
                 text-decoration: underline solid $color-white;
+            }
+        }
+    }
+}
+
+// * Advantages Cards
+.advantages {
+    &__cards {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-gap: 30px;
+
+        @include responsive(xxl) {
+            grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+        }
+
+        @include responsive(lg) {
+            grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+            grid-gap: 20px;
+        }
+    }
+
+    &__card {
+        @include flex(flex-start, center, column);
+        text-align: center;
+        padding: 42px 28px;
+        border-radius: $border-radius-1;
+        background-color: $second-color;
+        border: 1px solid $dark-color-2;
+        @include transition;
+        cursor: pointer;
+
+        &:hover {
+            border-color: $color-white;
+        }
+
+        @include responsive(xl) {
+            padding: 42px 20px;
+        }
+
+        @include responsive(lg) {
+            padding: 42px 15px;
+        }
+        @include responsive(sm) {
+            padding: 35px 20px;
+        }
+        @include responsive(xs) {
+            padding: 26px 20px;
+        }
+
+        &-imgbox {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #2A2A2AFF;
+            @include flex(center, center, column);
+            margin-bottom: 23px;
+
+            img {
+                width: 42px;
+                @include responsive(xs) {
+                    width: 30px;
+                }
+            }
+        }
+
+        &-title {
+            font-size: 34px;
+            font-weight: 600;
+            margin-bottom: 17px;
+
+            @include responsive(xl) {
+                font-size: 30px;
+            }
+
+            @include responsive(lg) {
+                font-size: 24px;
+            }
+            @include responsive(xs) {
+                font-size: 22px;
+            }
+        }
+
+        &-description {
+            font-size: 22px;
+            line-height: 27px;
+            color: $grey-color-4;
+
+            @include responsive(lg) {
+                font-size: 18px;
+            }
+            @include responsive(xs) {
+                font-size: 16px;
+            }
+            @include responsive(xxs) {
+                font-size: 14px;
             }
         }
     }

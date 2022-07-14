@@ -1,459 +1,577 @@
 // * Hero Section Styles
 .hero {
-  background-image: url("/images/hero/hero-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  padding: 50px 0 115px 0;
-
-  @include responsive(md) {
-    padding: 50px 0 85px 0;
-  }
-
-  @include responsive(xxs) {
-    padding: 20px 0 60px 0;
-  }
-
-  &__content {
-    @include flex(center, center, column);
-    color: $color-white;
-    flex-direction: column;
-  }
-
-  &-swiper {
-    width: 100%;
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: $color-white;
-      border-radius: 0;
-      opacity: 1;
-    }
-
-    .swiper-button-prev {
-      left: 0;
-    }
-
-    .swiper-button-next {
-      right: 0;
-    }
-
-    .swiper-button-next::after,
-    .swiper-button-prev::after {
-      font-size: 60px;
-      color: $color-white;
-
-      @include responsive(sm) {
-        font-size: 50px;
-      }
-
-      @include responsive(xs) {
-        font-size: 35px;
-      }
-
-      @include responsive(xxs) {
-        font-size: 25px;
-      }
-    }
-
-    .swiper-pagination-bullet {
-      background: $color-white;
-      width: 20px;
-      height: 20px;
-      opacity: 0.5;
-
-      &-active {
-        opacity: 1;
-      }
-
-      @include responsive(xs) {
-        width: 16px;
-        height: 16px;
-      }
-    }
-
-    @include responsive(xxs) {
-      .swiper-pagination {
-        display: none;
-      }
-    }
-  }
-
-  .swiper-wrapper {
-    padding-bottom: 80px;
-
-    @include responsive(xxs) {
-      padding-bottom: 0;
-    }
-  }
-
-  &__slide {
-    width: 1020px;
-    margin: 0 auto;
-    @include flex(center, center, column);
-    text-align: center;
-
-    @include responsive(lg) {
-      width: 85%;
-    }
-  }
-
-  &__suptitle {
-    @include flex(flex-start, center, row);
-    gap: 10px;
-    padding: 12px 19px;
-    background-color: $red-color;
-    border-radius: $border-radius-3;
-    margin-bottom: 32px;
-    cursor: pointer;
-
-    span {
-      font-size: 18px;
-    }
-
-    @include responsive(lg) {
-      margin-bottom: 24px;
-    }
-
-    @include responsive(sm) {
-      margin-bottom: 15px;
-
-      img {
-        width: 20px;
-        height: 20px;
-      }
-
-      span {
-        font-size: 16px;
-      }
-    }
-
-    @include responsive(xs) {
-      padding: 9px 21px;
-
-      img {
-        width: 16px;
-        height: 16px;
-      }
-
-      span {
-        font-size: 14px;
-      }
-    }
-  }
-
-  &__title {
-    font-weight: 700;
-    font-size: 70px;
-    line-height: 85px;
-    margin: 0;
-    margin-bottom: 32px;
-
-    @include responsive(lg) {
-      font-size: 60px;
-      line-height: 125%;
-      margin-bottom: 24px;
-    }
+    background-image: url("/images/hero/hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px 0 115px 0;
 
     @include responsive(md) {
-      font-size: 55px;
-    }
-
-    @include responsive(sm) {
-      font-size: 45px;
-      margin-bottom: 15px;
-    }
-
-    @include responsive(xs) {
-      font-size: 30px;
+        padding: 50px 0 85px 0;
     }
 
     @include responsive(xxs) {
-      font-size: 24px;
-    }
-  }
-
-  &__description {
-    color: $grey-color-1;
-    margin-bottom: 68px;
-
-    @include responsive(lg) {
-      margin-bottom: 55px;
-      font-size: 22px;
+        padding: 20px 0 60px 0;
     }
 
-    @include responsive(sm) {
-      margin-bottom: 55px;
-      font-size: 20px;
+    &__content {
+        @include flex(center, center, column);
+        color: $color-white;
+        flex-direction: column;
     }
 
-    @include responsive(xs) {
-      margin-bottom: 45px;
-      font-size: 16px;
+    &-swiper {
+        width: 100%;
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: $color-white;
+            border-radius: 0;
+            opacity: 1;
+        }
+
+        .swiper-button-prev {
+            left: 0;
+        }
+
+        .swiper-button-next {
+            right: 0;
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 60px;
+            color: $color-white;
+
+            @include responsive(sm) {
+                font-size: 50px;
+            }
+
+            @include responsive(xs) {
+                font-size: 35px;
+            }
+
+            @include responsive(xxs) {
+                font-size: 25px;
+            }
+        }
+
+        .swiper-pagination-bullet {
+            background: $color-white;
+            width: 20px;
+            height: 20px;
+            opacity: 0.5;
+
+            &-active {
+                opacity: 1;
+            }
+
+            @include responsive(xs) {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        @include responsive(xxs) {
+            .swiper-pagination {
+                display: none;
+            }
+        }
     }
 
-    @include responsive(xxs) {
-      margin-bottom: 0px;
-      font-size: 14px;
-    }
-  }
+    .swiper-wrapper {
+        padding-bottom: 80px;
 
-  &__buttons {
-    @include flex(center, center, row);
-    gap: 20px;
-
-    @include responsive(xs) {
-      gap: 15px;
+        @include responsive(xxs) {
+            padding-bottom: 0;
+        }
     }
 
-    @include responsive(xxs) {
-      display: none;
+    &__slide {
+        width: 1020px;
+        margin: 0 auto;
+        @include flex(center, center, column);
+        text-align: center;
+
+        @include responsive(lg) {
+            width: 85%;
+        }
     }
-  }
+
+    &__suptitle {
+        @include flex(flex-start, center, row);
+        gap: 10px;
+        padding: 12px 19px;
+        background-color: $red-color;
+        border-radius: $border-radius-3;
+        margin-bottom: 32px;
+        cursor: pointer;
+
+        span {
+            font-size: 18px;
+        }
+
+        @include responsive(lg) {
+            margin-bottom: 24px;
+        }
+
+        @include responsive(sm) {
+            margin-bottom: 15px;
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+            span {
+                font-size: 16px;
+            }
+        }
+
+        @include responsive(xs) {
+            padding: 9px 21px;
+
+            img {
+                width: 16px;
+                height: 16px;
+            }
+
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 85px;
+        margin: 0;
+        margin-bottom: 32px;
+
+        @include responsive(lg) {
+            font-size: 60px;
+            line-height: 125%;
+            margin-bottom: 24px;
+        }
+
+        @include responsive(md) {
+            font-size: 55px;
+        }
+
+        @include responsive(sm) {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        @include responsive(xs) {
+            font-size: 30px;
+        }
+
+        @include responsive(xxs) {
+            font-size: 24px;
+        }
+    }
+
+    &__description {
+        color: $grey-color-1;
+        margin-bottom: 68px;
+
+        @include responsive(lg) {
+            margin-bottom: 55px;
+            font-size: 22px;
+        }
+
+        @include responsive(sm) {
+            margin-bottom: 55px;
+            font-size: 20px;
+        }
+
+        @include responsive(xs) {
+            margin-bottom: 45px;
+            font-size: 16px;
+        }
+
+        @include responsive(xxs) {
+            margin-bottom: 0px;
+            font-size: 14px;
+        }
+    }
+
+    &__buttons {
+        @include flex(center, center, row);
+        gap: 20px;
+
+        @include responsive(xs) {
+            gap: 15px;
+        }
+
+        @include responsive(xxs) {
+            display: none;
+        }
+    }
 }
 
 // * Services Section Styles
 .services {
-  width: 100%;
-  background-color: $black-color;
-  padding: 44px 0;
-  color: $color-white;
-
-  @include responsive(md) {
-    padding: 30px 0;
-  }
-
-  .container {
-    position: relative;
-  }
-
-  &__content {
-    @include flex(space-between, center, row);
-    gap: 47px;
-
-    @include responsive(sm) {
-      flex-direction: column;
-    }
-
-    @include responsive(xs) {
-      gap: 30px;
-    }
-  }
-
-  &__texts {
-    @include flex(space-between, center, row);
-    gap: 37px;
-    width: 60%;
-
-    @include responsive(lg) {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 20px;
-      width: 55%;
-    }
-
-    @include responsive(sm) {
-      width: 100%;
-      text-align: center;
-      align-items: center;
-    }
-    @include responsive(xs) {
-      gap: 10px;
-    }
-  }
-
-  &__title {
-    font-weight: 600;
-    font-size: 44px;
-    line-height: 53px;
-
-    @include responsive(lg) {
-      font-size: 40px;
-    }
-
-    @include responsive(sm) {
-      font-size: 35px;
-    }
-    @include responsive(xs) {
-      font-size: 24px;
-      text-align: center;
-    }
-    @include responsive(xxs) {
-      line-height: 120%;
-      font-size: 22px;
-    }
-  }
-
-  &__description {
-    color: $grey-color-1;
-
-    @include responsive(xl) {
-      font-size: 22px;
-    }
-
-    @include responsive(md) {
-      font-size: 20px;
-    }
-    @include responsive(xs) {
-      font-size: 16px;
-    }
-    @include responsive(xxs) {
-      font-size: 14px;
-    }
-  }
-
-  &__cards {
-    @include flex(center, center, column);
-    gap: 9px;
-    width: 420px;
-    position: absolute;
-    right: 80px;
-
-    @include responsive(xl) {
-      width: 340px;
-    }
-
-    @include responsive(md) {
-      position: static;
-    }
-    @include responsive(xs) {
-      width: 250px;
-      gap: 3px;
-    }
-    @include responsive(xxs) {
-       width: 230px;
-    }
-  }
-
-  &__card {
     width: 100%;
-    padding: 20px 30px;
-    background: $dark-color-1;
-    border: 2px solid #4b4b4b;
-    border-radius: 15px;
+    background-color: $black-color;
+    padding: 44px 0;
+    color: $color-white;
 
-    &:first-child {
-      transform: matrix(0.98, 0, 0.19, 1, 0, 0);
-      margin-right: 90px;
-
-      @include responsive(lg) {
-        margin-right: 20px;
-      }
-
-      @include responsive(sm) {
-        margin-right: 100px;
-      }
-      @include responsive(xs) {
-        margin-right: 50px;
-      }
+    @include responsive(md) {
+        padding: 30px 0;
     }
 
-    &:last-child {
-      transform: matrix(0.98, 0, -0.2, 1, 0, 0);
-
-      @include responsive(sm) {
-        margin-left: 40px;
-      }
-
-      @include responsive(xs) {
-        margin-left: 30px;
-      }
+    .container {
+        position: relative;
     }
 
-    h4 {
-      font-weight: 600;
-      font-size: 30px;
-      margin-bottom: 12px;
+    &__content {
+        @include flex(space-between, center, row);
+        gap: 47px;
 
-      @include responsive(xs) {
-        margin-bottom: 5px;
-      }
+        @include responsive(sm) {
+            flex-direction: column;
+        }
+
+        @include responsive(xs) {
+            gap: 30px;
+        }
     }
 
-    @include responsive(xl) {
-      padding: 20px;
+    &__texts {
+        @include flex(space-between, center, row);
+        gap: 37px;
+        width: 60%;
 
-      h4 {
-        font-size: 1.5rem;
-      }
+        @include responsive(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            width: 55%;
+        }
 
-      span {
-        font-size: 1.25rem;
-      }
+        @include responsive(sm) {
+            width: 100%;
+            text-align: center;
+            align-items: center;
+        }
+
+        @include responsive(xs) {
+            gap: 10px;
+        }
     }
 
-    @include responsive(xs) {
-      padding: 16px;
-      h4 {
-        font-size: 16px;
-      }
-      span {
-        font-size: 14px;
-        line-height: 14px;
-      }
+    &__title {
+        font-weight: 600;
+        font-size: 44px;
+        line-height: 53px;
+
+        @include responsive(lg) {
+            font-size: 40px;
+        }
+
+        @include responsive(sm) {
+            font-size: 35px;
+        }
+
+        @include responsive(xs) {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        @include responsive(xxs) {
+            line-height: 120%;
+            font-size: 22px;
+        }
     }
-    @include responsive(xxs) {
-       span{
-        font-size: 12px;
-        line-height: 100%;
-       }
+
+    &__description {
+        color: $grey-color-1;
+
+        @include responsive(xl) {
+            font-size: 22px;
+        }
+
+        @include responsive(md) {
+            font-size: 20px;
+        }
+
+        @include responsive(xs) {
+            font-size: 16px;
+        }
+
+        @include responsive(xxs) {
+            font-size: 14px;
+        }
     }
-  }
+
+    &__cards {
+        @include flex(center, center, column);
+        gap: 9px;
+        width: 420px;
+        position: absolute;
+        right: 80px;
+
+        @include responsive(xl) {
+            width: 340px;
+        }
+
+        @include responsive(md) {
+            position: static;
+        }
+
+        @include responsive(xs) {
+            width: 250px;
+            gap: 3px;
+        }
+
+        @include responsive(xxs) {
+            width: 230px;
+        }
+    }
+
+    &__card {
+        width: 100%;
+        padding: 20px 30px;
+        background: $dark-color-1;
+        border: 2px solid #4b4b4b;
+        border-radius: 15px;
+
+        &:first-child {
+            transform: matrix(0.98, 0, 0.19, 1, 0, 0);
+            margin-right: 90px;
+
+            @include responsive(lg) {
+                margin-right: 20px;
+            }
+
+            @include responsive(sm) {
+                margin-right: 100px;
+            }
+
+            @include responsive(xs) {
+                margin-right: 50px;
+            }
+        }
+
+        &:last-child {
+            transform: matrix(0.98, 0, -0.2, 1, 0, 0);
+
+            @include responsive(sm) {
+                margin-left: 40px;
+            }
+
+            @include responsive(xs) {
+                margin-left: 30px;
+            }
+        }
+
+        h4 {
+            font-weight: 600;
+            font-size: 30px;
+            margin-bottom: 12px;
+
+            @include responsive(xs) {
+                margin-bottom: 5px;
+            }
+        }
+
+        @include responsive(xl) {
+            padding: 20px;
+
+            h4 {
+                font-size: 1.5rem;
+            }
+
+            span {
+                font-size: 1.25rem;
+            }
+        }
+
+        @include responsive(xs) {
+            padding: 16px;
+
+            h4 {
+                font-size: 16px;
+            }
+
+            span {
+                font-size: 14px;
+                line-height: 14px;
+            }
+        }
+
+        @include responsive(xxs) {
+            span {
+                font-size: 12px;
+                line-height: 100%;
+            }
+        }
+    }
 }
 
 // * Products Section Styles
-.products{
+.products {
     background-color: $primary-color;
     padding: 45px 0;
     color: $color-white;
-    &__content{
-        @include flex(center,center,column);
+
+    &__content {
+        @include flex(center, center, column);
         flex-direction: column;
     }
-    &__header{
-        @include flex(center,center,column);
+
+    &__header {
+        @include flex(center, center, column);
         flex-direction: column;
         text-align: center;
         width: 570px;
         margin: 0 auto;
         margin-bottom: 35px;
+
         @include responsive(sm) {
-           width: 100%;
+            width: 100%;
         }
     }
-    &__title{
+
+    &__title {
         font-size: 60px;
         line-height: 1.6;
         margin-bottom: 15px;
         color: $color-white;
         font-weight: 700;
+
         @include responsive(xxl) {
-           font-size: 50px;
+            font-size: 50px;
         }
+
+        @include responsive(md) {
+            font-size: 42px;
+        }
+
+        @include responsive(sm) {
+            font-size: 38px;
+        }
+
+        @include responsive(xs) {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        @include responsive(xxs) {
+            font-size: 24px;
+        }
+    }
+
+    &__subtitle {
+        color: $grey-color-2;
+
+        @include responsive(md) {
+            font-size: 20px;
+        }
+
+        @include responsive(xs) {
+            font-size: 16px;
+        }
+
+        @include responsive(xxs) {
+            font-size: 14px;
+        }
+    }
+}
+
+// * Advantages Section Styles
+.advantages {
+    background-color: $primary-color;
+    padding: 24px 0 48px 0;
+    color: $color-white;
+
+    &__content {
+        @include flex(center, flex-start, column);
+    }
+
+    &__header {
+        width: 100%;
+        @include flex(center, flex-start, column);
+        margin-bottom: 48px;
+
+        &-main {
+            width: 100%;
+            @include flex(flex-start, center, row);
+            gap: 36px;
+            margin-bottom: 41px;
+            @include responsive(xxl) {
+               gap: 20px;
+            }
+            @include responsive(md) {
+               flex-direction: column
+            }
+            @include responsive(xs) {
+               margin-bottom: 25px;
+            }
+        }
+
+        &-buttons {
+            @include flex(flex-start, center, row);
+            gap: 21px;
+            padding-right: 36px;
+            border-right: 1px solid #9E9E9E;
+            @include responsive(xxl) {
+                padding-right: 20px;
+            }
+            @include responsive(xl) {
+                flex: 2;
+                padding-right: 10px;
+            }
+            @include responsive(lg) {
+                flex: 4;
+            }
+            @include responsive(md) {
+               border:0;
+            }
+            @include responsive(sm) {
+               padding: 0;
+               gap: 10px;
+            }
+            @include responsive(xxs) {
+               gap: 5px;
+            }
+        }
+        &-text{
+            color: $grey-color-1;
+            @include responsive(xxl) {
+               font-size: 22px;
+            }
+            @include responsive(xl) {
+                flex: 1;
+                font-size: 20px;
+            }
+            @include responsive(xs) {
+                font-size: 18px;
+                text-align: center;
+            }
+            @include responsive(xxs) {
+               font-size: 14px;
+            }
+        }
+    }
+    &__title{
+        font-weight: 600;
+        color: $color-white;
         @include responsive(md) {
            font-size: 42px;
         }
         @include responsive(sm) {
+           text-align: center;
            font-size: 38px;
         }
         @include responsive(xs) {
            font-size: 30px;
-           margin-bottom: 10px;
         }
         @include responsive(xxs) {
            font-size: 24px;
         }
     }
-    &__subtitle{
-        color: $grey-color-2;
-        @include responsive(md) {
-           font-size: 20px;
-        }
-        @include responsive(xs) {
-           font-size: 16px;
-        }
-        @include responsive(xxs) {
-           font-size: 14px;
-        }
-    }
-} 
+}
