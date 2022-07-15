@@ -3196,14 +3196,14 @@ template {
   }
 }
 
-.location__map iframe {
+.location__map div, .location__map iframe {
   border-radius: 40px;
   width: 100% !important;
   height: 100% !important;
 }
 
 @media screen and (max-width: 576px) {
-  .location__map iframe {
+  .location__map div, .location__map iframe {
     border-radius: 10px;
   }
 }
@@ -3473,7 +3473,7 @@ template {
   height: 504px;
 }
 
-.map__main iframe {
+.map__main div, .map__main iframe {
   width: 100% !important;
   height: 100% !important;
 }
