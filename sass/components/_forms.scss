@@ -1,0 +1,64 @@
+.footer {
+    &__form {
+        width: 100%;
+        @include flex(center, flex-start, column);
+    }
+
+    &__input {
+        width: 100%;
+        margin-bottom: 21px;
+        background-color: $color-white;
+        padding: 13px 29px;
+        border: 2px solid #BEBEBE;
+        border-radius: 10px;
+        color: $black-color;
+        outline: none;
+        font-size: 24px;
+        font-weight: 500;
+        @include responsive(lg) {
+           font-size: 20px;
+           padding: 13px 18px;
+        }
+        @include responsive(md) {
+            font-size: 18px;
+            padding: 13px 15px;
+        }
+        @include responsive(xs) {
+            font-size: 16px;
+            padding: 10px 15px;
+        }
+        @include responsive(xxs) {
+            font-size: 12px;
+            padding: 7px 15px;
+        }
+    }
+    &__textarea{
+        font-weight: 500;
+        font-size: 24px;
+        width: 100%;
+        background-color: $color-white;
+        padding: 13px 29px;
+        border: 2px solid #BEBEBE;
+        border-radius: 10px;
+        color: $black-color;
+        outline: none;  
+        margin-bottom: 29px;
+        @include responsive(lg) {
+           font-size: 20px;
+           padding: 13px 18px;
+        }
+        @include responsive(md) {
+            font-size: 18px;
+            padding: 13px 15px;
+        }
+        @include responsive(xs) {
+            font-size: 16px;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+        }
+        @include responsive(xxs) {
+            font-size: 12px;
+            padding: 7px 15px;
+        }
+    }
+}

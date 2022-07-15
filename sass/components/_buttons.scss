@@ -73,21 +73,100 @@
         @include responsive(sm) {
             padding: 14px 20px;
             font-size: 14px;
-            img{
+
+            img {
                 width: 16px;
                 height: 16px;
             }
         }
+
         @include responsive(xs) {
             padding: 11px 9px;
             font-size: 12px;
-            img{
+
+            img {
                 display: none;
             }
         }
+
         @include responsive(xxs) {
             padding: 7px 7px;
             font-size: 11px;
+        }
+    }
+
+    &__location {
+        background-color: $red-color;
+        @include flex(center, center, row);
+        gap: 14px;
+        padding: 20px 115px;
+        border-radius: 10px;
+
+        span {
+            font-size: inherit;
+        }
+
+        @include responsive(md) {
+            padding: 18px 100px;
+        }
+
+        @include responsive(sm) {
+            padding: 16px 70px;
+            font-size: 22px;
+        }
+
+        @include responsive(xs) {
+            padding: 16px 50px;
+
+            img {
+                width: 16px;
+            }
+        }
+
+        @include responsive(xxs) {
+            font-size: 18px;
+            padding: 14px 40px;
+
+            img {
+                width: 14px;
+            }
+        }
+    }
+
+    &__footer {
+        background-color: $red-color;
+        padding: 20px;
+        @include flex(center, center, row);
+        gap: 12px;
+        border-radius: 10px;
+        width: 100%;
+
+        span {
+            font-size: inherit;
+        }
+
+        @include responsive(lg) {
+            padding: 16px;
+            font-size: 20px;
+        }
+
+        @include responsive(sm) {
+            padding: 13px;
+            font-size: 18px;
+        }
+        @include responsive(xs) {
+            padding: 10px;
+            font-size: 16px;
+            img{
+                width: 22px;
+            }
+        }
+        @include responsive(xxs) {
+            padding: 8px;
+            font-size: 14px;
+            img{
+                width: 18px;
+            }
         }
     }
 }

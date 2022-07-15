@@ -2,6 +2,7 @@
 .hero {
     background-image: url("/images/hero/hero-bg.jpg");
     background-repeat: no-repeat;
+    background-position-x: 50%;
     background-size: cover;
     background-attachment: fixed;
     padding: 50px 0 115px 0;
@@ -485,11 +486,12 @@
 // * Advantages Section Styles
 .advantages {
     background-color: $primary-color;
-    padding: 24px 0 48px 0;
     color: $color-white;
 
     &__content {
+        padding: 24px 0 48px 0;
         @include flex(center, flex-start, column);
+        border-bottom: 1px solid #474747;
     }
 
     &__header {
@@ -502,14 +504,17 @@
             @include flex(flex-start, center, row);
             gap: 36px;
             margin-bottom: 41px;
+
             @include responsive(xxl) {
-               gap: 20px;
+                gap: 20px;
             }
+
             @include responsive(md) {
-               flex-direction: column
+                flex-direction: column
             }
+
             @include responsive(xs) {
-               margin-bottom: 25px;
+                margin-bottom: 25px;
             }
         }
 
@@ -518,60 +523,367 @@
             gap: 21px;
             padding-right: 36px;
             border-right: 1px solid #9E9E9E;
+
             @include responsive(xxl) {
                 padding-right: 20px;
             }
+
             @include responsive(xl) {
                 flex: 2;
                 padding-right: 10px;
             }
+
             @include responsive(lg) {
                 flex: 4;
             }
+
             @include responsive(md) {
-               border:0;
+                border: 0;
             }
+
             @include responsive(sm) {
-               padding: 0;
-               gap: 10px;
+                padding: 0;
+                gap: 10px;
             }
+
             @include responsive(xxs) {
-               gap: 5px;
+                gap: 5px;
             }
         }
-        &-text{
+
+        &-text {
             color: $grey-color-1;
+
             @include responsive(xxl) {
-               font-size: 22px;
+                font-size: 22px;
             }
+
             @include responsive(xl) {
                 flex: 1;
                 font-size: 20px;
             }
+
             @include responsive(xs) {
                 font-size: 18px;
                 text-align: center;
             }
+
             @include responsive(xxs) {
-               font-size: 14px;
+                font-size: 14px;
             }
         }
     }
-    &__title{
+
+    &__title {
         font-weight: 600;
         color: $color-white;
+
         @include responsive(md) {
-           font-size: 42px;
+            font-size: 42px;
         }
+
         @include responsive(sm) {
-           text-align: center;
-           font-size: 38px;
+            text-align: center;
+            font-size: 38px;
         }
+
         @include responsive(xs) {
-           font-size: 30px;
+            font-size: 30px;
         }
+
         @include responsive(xxs) {
-           font-size: 24px;
+            font-size: 24px;
         }
     }
+}
+
+// * Applied Section Styles
+.applied {
+    background-color: $primary-color;
+    color: $color-white;
+
+    &__content {
+        padding: 48px 0 85px 0;
+        @include flex(center, flex-start, column);
+        border-bottom: 1px solid #474747;
+
+        @include responsive(xs) {
+            padding: 45px 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 46px;
+        font-weight: 600;
+        color: $color-white;
+
+        @include responsive(md) {
+            font-size: 42px;
+        }
+
+        @include responsive(sm) {
+            text-align: center;
+            font-size: 38px;
+        }
+
+        @include responsive(xs) {
+            font-size: 30px;
+            margin-bottom: 35px;
+        }
+
+        @include responsive(xxs) {
+            font-size: 24px;
+        }
+    }
+
+    &__main {
+        position: relative;
+        border: 1px solid #474747;
+        border-radius: 25px;
+        height: 627px;
+        width: 100%;
+        background-image: url("/images/applied/applied-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: 50%;
+
+        @include responsive(sm) {
+            height: 600px;
+        }
+
+        @include responsive(xs) {
+            height: 360px;
+        }
+    }
+
+    &-swiper {
+        width: 100%;
+        height: 80%;
+
+        @include responsive(xxs) {
+            height: 73%;
+        }
+
+        .swiper-button-next {
+            right: 70px;
+
+            @include responsive(md) {
+                right: 40px;
+            }
+
+            @include responsive(sm) {
+                right: 15px;
+            }
+
+            @include responsive(xxs) {
+                right: 5px;
+            }
+        }
+
+        .swiper-button-prev {
+            left: 70px;
+
+            @include responsive(md) {
+                left: 40px;
+            }
+
+            @include responsive(sm) {
+                left: 15px;
+            }
+
+            @include responsive(xxs) {
+                left: 5px;
+            }
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 65px;
+            color: #fff;
+
+            @include responsive(lg) {
+                font-size: 58px;
+            }
+
+            @include responsive(sm) {
+                font-size: 46px;
+            }
+
+            @include responsive(sm) {
+                font-size: 30px;
+            }
+
+            @include responsive(xxs) {
+                font-size: 25px;
+            }
+        }
+
+        .swiper-pagination-bullet {
+            background: $color-white;
+            width: 20px;
+            height: 20px;
+            opacity: 0.5;
+
+            &-active {
+                opacity: 1;
+            }
+
+            @include responsive(xs) {
+                width: 14px;
+                height: 14px;
+            }
+
+            @include responsive(xxs) {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+
+    .swiper-slide {
+        @include flex(center, center, row);
+    }
+
+    &__slide-title {
+        @include responsive(lg) {
+            font-size: 48px;
+        }
+
+        @include responsive(md) {
+            font-size: 45px;
+        }
+
+        @include responsive(sm) {
+            font-size: 38px;
+        }
+
+        @include responsive(xs) {
+            font-size: 24px;
+        }
+
+        @include responsive(ss) {
+            font-size: 20px;
+        }
+    }
+
+    &__footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        @include flex(center, center, row);
+        background: linear-gradient(344.49deg, #181818 10.69%, rgba(24, 24, 24, 0) 206.44%);
+        border-radius: 0px 0px 25px 25px;
+        color: $color-white;
+        padding: 24px 0;
+
+        @include responsive(xs) {
+            padding: 15px 0;
+        }
+
+        &-description {
+            font-size: 22px;
+            width: 973px;
+            margin: 0 auto;
+            text-align: center;
+
+            @include responsive(lg) {
+                font-size: 20px;
+            }
+
+            @include responsive(md) {
+                width: 100%;
+            }
+
+            @include responsive(sm) {
+                font-size: 18px;
+                padding: 0 20px;
+            }
+
+            @include responsive(xs) {
+                font-size: 12px;
+                padding: 0 10px;
+            }
+        }
+    }
+
+}
+
+// * Location Section Styles
+.location {
+    padding: 54px 0;
+    background-color: $primary-color;
+    color: $color-white;
+    @include responsive(sm) {
+       padding-bottom: 38px;
+    }
+
+    &__content {
+        border: 1px solid #474747;
+        border-radius: 25px;
+        padding: 54px 110px;
+        @include flex(center, center, column);
+        text-align: center;
+
+        @include responsive(md) {
+            padding: 54px;
+        }
+
+        @include responsive(sm) {
+            padding: 45px 30px;
+        }
+
+        @include responsive(xs) {
+            padding: 40px 20px;
+        }
+        @include responsive(xxs) {
+            padding: 30px 20px;
+        }
+    }
+
+    &__title {
+        line-height: 65px;
+        font-weight: 600;
+        margin-bottom: 45px;
+
+        @include responsive(md) {
+            font-size: 42px;
+            line-height: 120%;
+        }
+
+        @include responsive(sm) {
+            text-align: center;
+            font-size: 38px;
+        }
+
+        @include responsive(xs) {
+            font-size: 24px;
+            margin-bottom: 35px;
+        }
+
+        @include responsive(xxs) {
+            font-size: 20px;
+        }
+    }
+
+    &__map {
+        width: 100%;
+        height: 508px;
+        margin-bottom: 45px;
+        border-radius: 40px;
+
+        @include responsive(xs) {
+            height: 350px;
+            margin-bottom: 35px;
+        }
+
+        iframe {
+            border-radius: 40px;
+            width: 100% !important;
+            height: 100% !important;
+            @include responsive(xs) {
+               border-radius: 10px;
+            }
+        }
+    }
+
 }
