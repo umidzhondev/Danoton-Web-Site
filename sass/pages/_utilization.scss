@@ -1,0 +1,328 @@
+// * Hero Section Styles
+.utilization__hero {
+    background-image: url("/images/hero/hero-bg-utilization.jpg");
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 46px 0;
+
+    .hero__suptitle {
+        @include responsive(sm) {
+            img {
+                display: none;
+            }
+
+            span {
+                text-align: center;
+            }
+        }
+
+        @include responsive(xs) {
+            font-size: 14px;
+
+            span {
+                font-size: inherit;
+            }
+        }
+
+        @include responsive(xxs) {
+            font-size: 12px;
+            padding: 8px 19px;
+        }
+    }
+
+    .hero__descriptions {
+        @include flex(center, center, column);
+        gap: 20px;
+
+        p {
+            color: #cacaca;
+            font-weight: 500;
+
+            &:first-child {
+                width: 754px;
+                margin: 0 auto;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #cacaca;
+            }
+
+            &:last-child {
+                width: 921px;
+                margin: 0 auto;
+
+                span {
+                    font-size: inherit;
+
+                    color: $color-white
+                }
+            }
+
+            @include responsive(lg) {
+
+                &:last-child,
+                &:first-child {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            @include responsive(md) {
+                font-size: 22px;
+            }
+
+            @include responsive(sm) {
+                font-size: 20px;
+            }
+
+            @include responsive(xs) {
+                font-size: 16px;
+            }
+
+            @include responsive(xs) {
+                font-size: 14px;
+            }
+
+        }
+
+        @include responsive(lg) {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}
+
+// * Address Section Styles
+.address {
+    background-color: $black-color;
+    padding: 45px 0;
+    color: $color-white;
+
+    @include responsive(xs) {
+        padding: 35px 0;
+    }
+
+    @include responsive(xxs) {
+        padding: 32px 0;
+    }
+
+    &__content {
+        @include flex(center, center, column);
+        text-align: center;
+        gap: 27px;
+    }
+
+    &__text {
+        @include flex(center, center, row);
+        gap: 15px;
+        font-size: 24px;
+        font-weight: 500;
+
+        span {
+            color: $grey-color-1;
+            font-size: inherit;
+        }
+
+        p {
+            font-size: inherit;
+            color: $color-white;
+        }
+
+        @include responsive(xl) {
+            flex-wrap: wrap;
+        }
+
+        @include responsive(md) {
+            font-size: 22px;
+
+            img {
+                width: 45px;
+            }
+        }
+
+        @include responsive(sm) {
+            font-size: 20px;
+        }
+
+        @include responsive(xs) {
+            font-size: 16px;
+
+            img {
+                width: 40px;
+            }
+        }
+
+        @include responsive(xs) {
+            font-size: 14px;
+
+            img {
+                width: 35px;
+            }
+        }
+    }
+
+}
+
+// * Map Section Styles
+.map {
+    background-color: $primary-color;
+    color: $color-white;
+
+    &__content {
+        @include flex(center, center, column);
+    }
+
+    &__header {
+        width: 100%;
+        @include flex(center, center, row);
+        text-align: center;
+        padding: 32px 0;
+
+        .location__title {
+            margin-bottom: 0;
+        }
+    }
+
+    &__main {
+        width: 100%;
+        height: 504px;
+
+        iframe {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        @include responsive(sm) {
+            height: 400px;
+        }
+
+        @include responsive(xs) {
+            height: 350px;
+        }
+
+        @include responsive(xxs) {
+            height: 330px;
+        }
+    }
+}
+
+// * Info Section Styles
+.info {
+    padding: 60px 0;
+    background-color: $primary-color;
+    color: $color-white;
+
+    @include responsive(sm) {
+        padding: 50px 0;
+    }
+
+    @include responsive(xs) {
+        padding: 40px 0;
+    }
+
+    &__content {
+        @include flex(flex-start, flex-start, column);
+    }
+
+    &__main {
+        @include flex(flex-start, flex-start, column);
+        width: 100%;
+
+        &-buttons {
+            margin-bottom: 24px;
+            border: none;
+
+            .button__advantages {
+                @include responsive(xs) {
+                    padding: 11px 13px;
+                }
+                @include responsive(xxs) {
+                    padding: 11px 10px;
+                }
+            }
+
+        }
+    }
+
+    &__title {
+        margin-bottom: 24px;
+    }
+
+    &__subtitle {
+        color: $grey-color-2;
+        font-size: 30px;
+        margin-bottom: 24px;
+        font-weight: 500;
+
+        @include responsive(md) {
+            font-size: 24px;
+        }
+
+        @include responsive(xs) {
+            font-size: 20px;
+        }
+
+        @include responsive(xxs) {
+            font-size: 16px;
+        }
+    }
+
+    &__description {
+        @include flex(flex-start, flex-start, column);
+        gap: 30px;
+        width: 90%;
+        margin-bottom: 29px;
+
+        p {
+            font-size: 30px;
+            color: $grey-color-1;
+
+            &:first-child {
+                padding-bottom: 35px;
+                border-bottom: 1px solid $grey-color-1;
+
+                @include responsive(sm) {
+                    padding-bottom: 30px;
+                }
+
+                @include responsive(xs) {
+                    padding-bottom: 20px;
+                }
+            }
+
+            span {
+                font-size: inherit;
+                color: $color-white
+            }
+
+            @include responsive(lg) {
+                font-size: 24px;
+            }
+
+            @include responsive(sm) {
+                font-size: 22px;
+            }
+
+            @include responsive(xs) {
+                font-size: 16px;
+                line-height: 140%;
+            }
+            @include responsive(xxs) {
+               font-size: 14px;
+            }
+        }
+
+        @include responsive(md) {
+            width: 100%;
+        }
+
+        @include responsive(sm) {
+            gap: 20px;
+        }
+
+        @include responsive(xs) {
+            gap: 15px;
+        }
+    }
+
+}

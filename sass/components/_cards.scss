@@ -241,3 +241,30 @@
         }
     }
 }
+
+// * Info Cards
+.info{
+    &__cards{
+        width: 100%;
+        @include flex(flex-start,stretch,row);
+        @include responsive(md) {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+            grid-gap: 20px;
+        }
+    }
+    .advantages__card{
+        width: 360px;
+        &-imgbox{
+            span{
+                color: red;
+                font-size: 30px;
+                font-weight: 500;
+            }
+        }
+        @include responsive(md) {
+            width: 100%;
+            padding: 42px 15px;
+        }
+    }
+} 

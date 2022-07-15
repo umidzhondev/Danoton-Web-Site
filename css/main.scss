@@ -28,8 +28,8 @@
 
 // * Importing Scss Files
 @import "../sass/abstracts/variables";
-@import "../sass/abstracts/extends";
 @import "../sass/abstracts/mixins";
+@import "../sass/abstracts/extends";
 
 @import "../sass/base/reset";
 @import "../sass/base/typography";
@@ -46,4 +46,5 @@
 @import "../sass/layout/container";
 
 @import "../sass/pages/home";
+@import "../sass/pages/utilization";
 
