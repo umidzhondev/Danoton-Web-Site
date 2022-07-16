@@ -13,7 +13,7 @@ var swiper = new Swiper(".hero-swiper", {
   keyboard: true,
   loop: true,
   autoplay: {
-    delay: 2000,
+    delay: 4000,
     disableOnInteraction: false,
   },
 });
@@ -31,7 +31,7 @@ var swiper = new Swiper(".applied-swiper", {
   keyboard: true,
   loop: true,
   autoplay: {
-    delay: 2000,
+    delay: 3500,
     disableOnInteraction: false,
   },
 });
