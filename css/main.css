@@ -3209,7 +3209,7 @@ template {
 }
 
 .utilization__hero {
-  background-image: url("/images/hero/hero-bg-utilization.jpg");
+  background-image: url("/images/hero/utilization-bg.jpg");
   background-repeat: no-repeat;
   background-position-x: 50%;
   background-size: cover;
