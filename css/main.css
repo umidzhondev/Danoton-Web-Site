@@ -1880,7 +1880,7 @@ template {
   padding: 50px 0 115px 0;
 }
 
-@media (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-max-device-pixel-ratio: 2), (max--moz-device-pixel-ratio: 2), (max-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2), (max-device-pixel-ratio: 2) and (max-resolution: 192dpi) and (max-resolution: 2dppx) {
+@media (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-max-device-pixel-ratio: 2), (max--moz-device-pixel-ratio: 2), (max-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2), (max-device-pixel-ratio: 2) and (max-resolution: 192dpi) and (max-resolution: 2dppx) {
   .hero {
     background-image: url("/images/hero/hero-bg@2x.jpg");
   }
