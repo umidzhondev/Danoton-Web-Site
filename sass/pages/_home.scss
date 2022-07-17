@@ -6,10 +6,15 @@
   background-size: cover;
   background-attachment: fixed;
   padding: 50px 0 115px 0;
-  @media all and (-webkit-min-device-pixel-ratio: 1.5),
-    all and (-o-min-device-pixel-ratio: 3/2),
-    all and (min--moz-device-pixel-ratio: 1.5),
-    all and (min-device-pixel-ratio: 1.5) {
+  @media
+  ( min-device-width: 320px) and
+  ( max-device-width: 568px) and
+  ( -webkit-max-device-pixel-ratio: 2),
+  ( max--moz-device-pixel-ratio: 2),
+  ( -o-max-device-pixel-ratio: 2/1),
+  ( max-device-pixel-ratio: 2) and
+  ( max-resolution: 192dpi) and
+  ( max-resolution: 2dppx) { 
     background-image: url("/images/hero/hero-bg@2x.jpg");
   }
 
