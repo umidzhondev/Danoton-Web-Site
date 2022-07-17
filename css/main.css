@@ -1880,6 +1880,12 @@ template {
   padding: 50px 0 115px 0;
 }
 
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-device-pixel-ratio: 2) and (min-width: 320px), only screen and (min-resolution: 192dpi) and (min-width: 320px), only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .hero {
+    background-image: url("/images/hero/hero-bg@2x.jpg");
+  }
+}
+
 @media screen and (max-width: 992px) {
   .hero {
     padding: 50px 0 85px 0;
@@ -1889,6 +1895,7 @@ template {
 @media screen and (max-width: 400px) {
   .hero {
     padding: 20px 0 60px 0;
+    background-position-x: 51%;
   }
 }
 
@@ -2679,7 +2686,7 @@ template {
           flex-direction: row;
   gap: 21px;
   padding-right: 36px;
-  border-right: 1px solid #9E9E9E;
+  border-right: 1px solid #9e9e9e;
 }
 
 @media screen and (max-width: 1700px) {
@@ -3196,14 +3203,16 @@ template {
   }
 }
 
-.location__map div, .location__map iframe {
+.location__map div,
+.location__map iframe {
   border-radius: 40px;
   width: 100% !important;
   height: 100% !important;
 }
 
 @media screen and (max-width: 576px) {
-  .location__map div, .location__map iframe {
+  .location__map div,
+  .location__map iframe {
     border-radius: 10px;
   }
 }
