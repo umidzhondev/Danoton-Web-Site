@@ -1880,7 +1880,7 @@ template {
   padding: 50px 0 115px 0;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 1.1), only screen and (min--moz-device-pixel-ratio: 1.1), only screen and (-ms-min-device-pixel-ratio: 1.1), only screen and (min-device-pixel-ratio: 1.1), only screen and (-webkit-min-device-pixel-ratio: 1.0520833333333333), only screen and (min-resolution: 101dpi), only screen and (min-resolution: 1.1dppx) {
+@media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
   .hero {
     background-image: url("/images/hero/hero-bg@2x.jpg");
   }
