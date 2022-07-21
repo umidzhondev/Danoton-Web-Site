@@ -12,10 +12,10 @@ var swiper = new Swiper(".hero-swiper", {
   mousewheel: true,
   keyboard: true,
   loop: true,
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 4000,
+  //   disableOnInteraction: false,
+  // },
 });
 var swiper = new Swiper(".applied-swiper", {
   cssMode: true,
@@ -30,8 +30,8 @@ var swiper = new Swiper(".applied-swiper", {
   mousewheel: true,
   keyboard: true,
   loop: true,
-  autoplay: {
-    delay: 3500,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 3500,
+  //   disableOnInteraction: false,
+  // },
 });

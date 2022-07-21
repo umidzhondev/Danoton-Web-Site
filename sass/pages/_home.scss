@@ -1,10 +1,5 @@
 // * Hero Section Styles
 .hero {
-  //   background-image: url("/images/hero/hero-bg@2x.jpg");
-  //   background-repeat: no-repeat;
-  //   background-position-x: 50%;
-  //   background-size: cover;
-  //   background-attachment: fixed;
   padding: 50px 0 115px 0;
   position: relative;
   overflow: hidden;
@@ -656,10 +651,8 @@
     border-radius: 25px;
     height: 627px;
     width: 100%;
-    background-image: url("/images/applied/applied-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: 50%;
+    overflow: hidden;
+
 
     @include responsive(sm) {
       height: 600px;
@@ -672,11 +665,7 @@
 
   &-swiper {
     width: 100%;
-    height: 80%;
-
-    @include responsive(xxs) {
-      height: 73%;
-    }
+    height: 100%;
 
     .swiper-button-next {
       right: 70px;
@@ -709,6 +698,12 @@
         left: 5px;
       }
     }
+    .swiper-button-next,.swiper-button-prev{
+      top: 46%;
+      @include responsive(md) {
+        top: 44%;
+      }
+    }
 
     .swiper-button-next::after,
     .swiper-button-prev::after {
@@ -729,6 +724,15 @@
 
       @include responsive(xxs) {
         font-size: 25px;
+      }
+    }
+    .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+      bottom: 20%;
+      @include responsive(md) {
+         bottom: 23%;
+      }
+      @include responsive(xxs) {
+         bottom: 27%;
       }
     }
 
@@ -757,18 +761,39 @@
   .swiper-slide {
     @include flex(center, center, row);
   }
+  &__slide{
+    height: 100%;
+    width: 100%;
+    @include flex(center,center,column);
+    &-bg{
+      img{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        border-radius: 25px;
+      }
+    }
+  }
 
   &__slide-title {
+    position: absolute;
+    z-index: 99;
+    margin-bottom: 4%;
     @include responsive(lg) {
       font-size: 48px;
     }
 
     @include responsive(md) {
       font-size: 45px;
+      margin-bottom: 10%;
     }
 
     @include responsive(sm) {
       font-size: 38px;
+      margin-bottom: 15%;
     }
 
     @include responsive(xs) {
@@ -783,6 +808,7 @@
   &__footer {
     position: absolute;
     bottom: 0;
+    z-index: 999;
     width: 100%;
     @include flex(center, center, row);
     background: linear-gradient(
